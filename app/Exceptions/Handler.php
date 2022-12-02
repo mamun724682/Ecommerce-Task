@@ -2,7 +2,12 @@
 
 namespace App\Exceptions;
 
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\Response;
+use Illuminate\Validation\ValidationException;
+use Symfony\Component\ErrorHandler\Exception\FlattenException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -43,6 +48,31 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
+        $this->renderable(function (NotFoundHttpException $e) {
+            return response()->error('Not found', [], $e->getStatusCode());
+        });
+
+        $this->renderable(function (ValidationException $e) {
+            $errors = $e->validator->errors()->getMessages();
+            return response()->error($e->getMessage(), $errors, Response::HTTP_UNPROCESSABLE_ENTITY);
+        });
+
+        $this->renderable(function (AuthenticationException $e) {
+            return response()->error($e->getMessage(), [], Response::HTTP_UNAUTHORIZED);
+        });
+
+        // .............will handle more exception
+        $this->renderable(function (\Exception $e) {
+            $fe = FlattenException::create($e);
+            if (config('app.env') === 'production'){
+                $message = "Something wrong!";
+            }else{
+                $message = $fe->getMessage();
+            }
+
+            return response()->error($message, [], $fe->getStatusCode());
+        });
+
         $this->reportable(function (Throwable $e) {
             //
         });
