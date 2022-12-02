@@ -63,4 +63,15 @@ class AuthController extends Controller
             new UserResource(auth()->user())
         );
     }
+
+    /**
+     * @route /api/v1/logout
+     * @return JsonResponse
+     */
+    public function logout(): JsonResponse
+    {
+        $this->authService->logout();
+
+        return response()->success('Logged out successfully.');
+    }
 }

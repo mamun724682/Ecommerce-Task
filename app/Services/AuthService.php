@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Models\User;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Support\Facades\DB;
+use Laravel\Passport\RefreshTokenRepository;
 
 class AuthService extends BaseService
 {
@@ -51,6 +52,17 @@ class AuthService extends BaseService
     }
 
     /**
+     * @return null
+     * @throws \Exception
+     */
+    public function logout()
+    {
+        $this->revokeAccessAndRefreshToken(auth()->user());
+
+        return null;
+    }
+
+    /**
      * @param $user
      * @param $remember_me
      * @return array
@@ -69,5 +81,29 @@ class AuthService extends BaseService
             'token_type'   => 'Bearer',
             'expires_in'   => $expiration
         ];
+    }
+
+    /**
+     * @param $user
+     * @return bool
+     * @throws \Exception
+     */
+    private function revokeAccessAndRefreshToken(User $user): bool
+    {
+        try {
+            $token = $user->token();
+
+            /* --------------------------- revoke access token -------------------------- */
+            $token->revoke();
+            $token->delete();
+
+            /* -------------------------- revoke refresh token -------------------------- */
+            $refreshTokenRepository = app(RefreshTokenRepository::class);
+            $refreshTokenRepository->revokeRefreshTokensByAccessTokenId($token->id);
+
+            return true;
+        } catch (\Exception $e) {
+            throw $e;
+        }
     }
 }
