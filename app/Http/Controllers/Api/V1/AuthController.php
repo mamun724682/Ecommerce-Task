@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Resources\AccessTokenResource;
 use App\Services\AuthService;
@@ -30,6 +31,22 @@ class AuthController extends Controller
             'User registered successfully.',
             new AccessTokenResource($response),
             Response::HTTP_CREATED
+        );
+    }
+
+    /**
+     * @route /api/v1/login
+     * @param LoginRequest $request
+     * @return mixed
+     * @throws \Illuminate\Auth\AuthenticationException
+     */
+    public function login(LoginRequest $request): JsonResponse
+    {
+        $response = $this->authService->login($request->validated());
+
+        return response()->success(
+            'Login successful.',
+            new AccessTokenResource($response)
         );
     }
 }

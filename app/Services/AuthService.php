@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\User;
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Support\Facades\DB;
 
 class AuthService extends BaseService
@@ -33,6 +34,20 @@ class AuthService extends BaseService
             DB::rollBack();
             throw $e;
         }
+    }
+
+    /**
+     * @param $data
+     * @return array
+     * @throws AuthenticationException
+     */
+    public function login(array $data): array
+    {
+        if (!auth()->attempt($data)) {
+            throw new AuthenticationException(trans('auth.failed'));
+        }
+
+        return $this->createToken(auth()->user());
     }
 
     /**
