@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Resources\AccessTokenResource;
+use App\Http\Resources\UserResource;
 use App\Services\AuthService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -47,6 +48,19 @@ class AuthController extends Controller
         return response()->success(
             'Login successful.',
             new AccessTokenResource($response)
+        );
+    }
+
+    /**
+     * @route /api/v1/auth-user
+     * @return JsonResponse
+     * @desc Authenticated user
+     */
+    public function authUser(): JsonResponse
+    {
+        return response()->success(
+            'Logged in user.',
+            new UserResource(auth()->user())
         );
     }
 }
