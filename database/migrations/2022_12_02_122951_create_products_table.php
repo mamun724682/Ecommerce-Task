@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('brand');
-            $table->string('price');
+            $table->double('price')->default(0);
             $table->timestamps();
         });
     }
