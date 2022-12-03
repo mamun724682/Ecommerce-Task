@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\ProductController;
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,5 +28,13 @@ Route::prefix('v1')->group(function () {
         Route::get('auth-user', [AuthController::class, 'authUser']);
         Route::get('logout', [AuthController::class, 'logout']);
 
+        // Cart
+        Route::get('cart-list', [CartController::class, 'index']);
+        Route::post('add-to-cart', [CartController::class, 'addToCart']);
+        Route::post('cart-item-quantity-set/{cartItemIndex}', [CartController::class, 'cartItemQuantitySet']);
+        Route::post('increment-cart-item/{cartItemIndex}', [CartController::class, 'incrementCartItem']);
+        Route::post('decrement-cart-item/{cartItemIndex}', [CartController::class, 'decrementCartItem']);
+        Route::delete('remove-from-cart/{cartItemIndex}', [CartController::class, 'removeFromCart']);
+        Route::delete('clear-cart', [CartController::class, 'clearCart']);
     });
 });

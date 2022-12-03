@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use Freshbitsweb\LaravelCartManager\Traits\Cartable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    use HasFactory;
+    use HasFactory, Cartable;
 
     protected $fillable = [
         'name',
