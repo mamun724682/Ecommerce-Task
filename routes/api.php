@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\Api\V1\AuthController;
+use App\Http\Controllers\Api\V1\CartController;
 use App\Http\Controllers\Api\V1\ProductController;
-use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,5 +36,8 @@ Route::prefix('v1')->group(function () {
         Route::post('decrement-cart-item/{cartItemIndex}', [CartController::class, 'decrementCartItem']);
         Route::delete('remove-from-cart/{cartItemIndex}', [CartController::class, 'removeFromCart']);
         Route::delete('clear-cart', [CartController::class, 'clearCart']);
+
+        // Order
+//        Route::post('place-order', [CartController::class, 'addToCart']);
     });
 });
