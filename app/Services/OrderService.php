@@ -18,7 +18,12 @@ class OrderService extends BaseService
         $this->orderItemService = app(OrderItemService::class);
     }
 
-    public function storeOrder(array $data)
+    /**
+     * @param array $data
+     * @return Order
+     * @throws \Throwable
+     */
+    public function storeOrder(array $data): Order
     {
         try {
             DB::beginTransaction();
@@ -29,7 +34,7 @@ class OrderService extends BaseService
             throw_if($cart['payable'] == 0, new OrderEmptyCartException());
 
             // Store order
-            $order_data = $cart + $data + ['user_id' => auth()->id()];
+            $order_data = $cart + $data + ['user_id' => auth()->id(), 'status' => $this->model::STATUS_PROCESSING];
             $order = $this->storeOrUpdate($order_data);
 
             // Store order items

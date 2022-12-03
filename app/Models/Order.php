@@ -11,6 +11,9 @@ class Order extends Model
 {
     use HasFactory;
 
+    const STATUS_PENDING = 'pending';
+    const STATUS_PROCESSING = 'processing';
+
     protected $guarded = ['id'];
 
     /**
