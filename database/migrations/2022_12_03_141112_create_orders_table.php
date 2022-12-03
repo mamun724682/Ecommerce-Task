@@ -20,13 +20,16 @@ return new class extends Migration
 
             $table->decimal('subtotal', 8, 2);
             $table->decimal('discount', 8, 2);
-            $table->decimal('discount_percentage', 5, 2);
-            $table->decimal('shipping_charges', 8, 2);
-            $table->decimal('net_total', 8, 2);
+            $table->decimal('discountPercentage', 5, 2);
+            $table->decimal('shippingCharges', 8, 2);
+            $table->decimal('netTotal', 8, 2);
             $table->decimal('tax', 8, 2);
             $table->decimal('total', 8, 2);
-            $table->decimal('round_off', 8, 2);
+            $table->decimal('roundOff', 8, 2);
             $table->decimal('payable', 8, 2);
+
+            $table->string('shipping_address');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

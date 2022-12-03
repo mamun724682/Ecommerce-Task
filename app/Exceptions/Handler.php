@@ -62,6 +62,10 @@ class Handler extends ExceptionHandler
             return response()->error($e->getMessage(), [], Response::HTTP_UNAUTHORIZED);
         });
 
+        $this->renderable(function (OrderEmptyCartException $e) {
+            return response()->error($e->getMessage(), [], $e->getCode());
+        });
+
         // .............will handle more exception
         $this->renderable(function (\Exception $e) {
             $fe = FlattenException::create($e);

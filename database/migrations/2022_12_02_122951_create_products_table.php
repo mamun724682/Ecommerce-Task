@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('brand');
-            $table->double('price')->default(0);
+            $table->string('name')->index();
+            $table->string('brand')->index();
+            $table->double('price')->default(0)->index();
             $table->timestamps();
         });
     }

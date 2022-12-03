@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\CartController;
+use App\Http\Controllers\Api\V1\OrderController;
 use App\Http\Controllers\Api\V1\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,6 +39,6 @@ Route::prefix('v1')->group(function () {
         Route::delete('clear-cart', [CartController::class, 'clearCart']);
 
         // Order
-//        Route::post('place-order', [CartController::class, 'addToCart']);
+        Route::apiResource('orders', OrderController::class)->only(['index', 'store']);
     });
 });
