@@ -29,7 +29,7 @@ Route::prefix('v1')->group(function () {
         Route::get('logout', [AuthController::class, 'logout']);
 
         // Cart
-        Route::get('cart-list', [CartController::class, 'index']);
+        Route::get('cart-items', [CartController::class, 'cartItems']);
         Route::post('add-to-cart', [CartController::class, 'addToCart']);
         Route::post('cart-item-quantity-set/{cartItemIndex}', [CartController::class, 'cartItemQuantitySet']);
         Route::post('increment-cart-item/{cartItemIndex}', [CartController::class, 'incrementCartItem']);

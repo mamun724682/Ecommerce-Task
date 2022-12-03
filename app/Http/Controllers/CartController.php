@@ -4,117 +4,109 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CartQuantityRequest;
 use App\Http\Requests\CartRequest;
-use App\Models\Product;
+use App\Services\CartService;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
+    public function __construct(private CartService $cartService)
+    {
+    }
+
     /**
+     * Cart items list
+     *
      * @return JsonResponse
      */
-    public function index(): JsonResponse
+    public function cartItems(): JsonResponse
     {
         return response()->success(
-            'Cart List.',
-            $this->getCartDetails()
+            'Cart Items.',
+            $this->cartService->getCartItems()
         );
     }
 
-    public function addToCart(CartRequest $request)
+    /**
+     * Add item to cart
+     *
+     * @param CartRequest $request
+     * @return JsonResponse
+     */
+    public function addToCart(CartRequest $request): JsonResponse
     {
-        Product::addToCart($request->product_id, $request->quantity ?? 1);
         return response()->success(
             'Product added to cart.',
-            $this->getCartDetails()
+            $this->cartService->addToCart($request->validated())
         );
     }
 
     /**
-     * Increment cart item quantity.
+     * Set cart item quantity.
      *
+     * @param CartQuantityRequest $request
+     * @param $cartItemIndex
      * @return JsonResponse
      */
-    public function cartItemQuantitySet(CartQuantityRequest $request, $cartItemIndex)
+    public function cartItemQuantitySet(CartQuantityRequest $request, $cartItemIndex): JsonResponse
     {
-        cart()->setQuantityAt($cartItemIndex, $request->quantity);
-
         return response()->success(
             'Cart quantity updated.',
-            $this->getCartDetails()
+            $this->cartService->cartItemQuantitySet($cartItemIndex, $request->quantity)
         );
     }
 
     /**
      * Increment cart item quantity.
      *
+     * @param $cartItemIndex
      * @return JsonResponse
      */
-    public function incrementCartItem($cartItemIndex)
+    public function incrementCartItem($cartItemIndex): JsonResponse
     {
-        cart()->incrementQuantityAt($cartItemIndex);
-
         return response()->success(
             'Cart updated.',
-            $this->getCartDetails()
+            $this->cartService->incrementCartItem($cartItemIndex)
         );
     }
 
     /**
      * Decrement cart item quantity.
      *
+     * @param $cartItemIndex
      * @return JsonResponse
      */
-    public function decrementCartItem($cartItemIndex)
+    public function decrementCartItem($cartItemIndex): JsonResponse
     {
-        cart()->decrementQuantityAt($cartItemIndex);
-
         return response()->success(
             'Cart updated.',
-            $this->getCartDetails()
+            $this->cartService->decrementCartItem($cartItemIndex)
         );
     }
 
     /**
      * Remove from cart.
      *
+     * @param $cartItemIndex
      * @return JsonResponse
      */
-    public function removeFromCart($cartItemIndex)
+    public function removeFromCart($cartItemIndex): JsonResponse
     {
-
-        cart()->removeAt($cartItemIndex);
-
         return response()->success(
             'Product removed from cart.',
-            $this->getCartDetails()
+            $this->cartService->removeFromCart($cartItemIndex)
         );
     }
 
     /**
-     * Remove from cart.
+     * Clear items from cart.
      *
      * @return JsonResponse
      */
-    public function clearCart()
+    public function clearCart(): JsonResponse
     {
-
-        cart()->clear();
-
         return response()->success(
             'Cart cleared.',
-            $this->getCartDetails()
+            $this->cartService->clearCart()
         );
-    }
-
-    /**
-     * @return array
-     */
-    private function getCartDetails(): array
-    {
-        return [
-            'items' => cart()->items(),
-            'totals' => cart()->totals(),
-        ];
     }
 }
