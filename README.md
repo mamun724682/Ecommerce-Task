@@ -11,6 +11,7 @@
 - run command <code>php artisan db:seed</code> <br>
 - run command <code>php artisan passport:install</code> <br>
 - add passport access & grant credentials to .env <br>
+- run command <code>php artisan serve</code> and update env **APP_URL** <br>
 - run command <code>php artisan queue:listen</code> to import products <br>
 
 `Api Documentation:` _/request-docs_ <br>
