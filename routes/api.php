@@ -23,6 +23,7 @@ Route::prefix('v1')->group(function () {
     Route::post('/login', [AuthController::class, 'login']);
 
     // Import products
+    Route::get('/products', [ProductController::class, 'index']);
     Route::post('/products-import', [ProductController::class, 'import']);
 
     Route::group(['middleware' => 'auth:api'], function () {
