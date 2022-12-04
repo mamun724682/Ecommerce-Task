@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
 use Illuminate\Http\Response;
 
@@ -16,7 +17,7 @@ class Authenticate extends Middleware
     protected function redirectTo($request)
     {
         if ($request->is('api/*') || $request->is('oauth/*')) {
-            throw new \Exception('Unauthorized request.', Response::HTTP_UNAUTHORIZED);
+            throw new AuthenticationException();
         }
 
         if (! $request->expectsJson()) {
