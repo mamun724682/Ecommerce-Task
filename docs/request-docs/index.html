@@ -134,7 +134,7 @@
                 <tbody>
                                         <tr v-if="!docs[0]['isHidden']">
                         <td>
-                            <a href="#POST-api/v1/add-to-cart" @click="highlightSidebar(0)" >
+                            <a href="#GET-api/v1/auth-user" @click="highlightSidebar(0)" >
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -146,25 +146,25 @@
                                     font-bold
                                     leading-none
                                     rounded
-                                    text--100 bg--500
-                                    text-black bg-red-500
+                                    text-green-100 bg-green-500
+                                    text- bg--500
                                     text--100 bg--500
                                     text--100 bg--500
                                     text- bg-
                                     ">
-                                    POST
+                                    GET
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[0]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[0]['responseOk'] === null">api/v1/add-to-cart</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[0]['responseOk'] === null">api/v1/auth-user</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[0]['responseOk'] === true">
-                                        api/v1/add-to-cart -
+                                        api/v1/auth-user -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[0]['responseCode'] + ', Took:' + docs[0]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[0]['responseOk'] === false">
-                                        api/v1/add-to-cart -
+                                        api/v1/auth-user -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[0]['responseCode'] + ', Took:' + docs[0]['responseTime'] + 'ms'">
@@ -176,7 +176,7 @@
                     </tr>
                                         <tr v-if="!docs[1]['isHidden']">
                         <td>
-                            <a href="#GET-api/v1/auth-user" @click="highlightSidebar(1)" >
+                            <a href="#GET-api/v1/logout" @click="highlightSidebar(1)" >
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -197,16 +197,16 @@
                                     GET
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[1]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[1]['responseOk'] === null">api/v1/auth-user</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[1]['responseOk'] === null">api/v1/logout</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[1]['responseOk'] === true">
-                                        api/v1/auth-user -
+                                        api/v1/logout -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[1]['responseCode'] + ', Took:' + docs[1]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[1]['responseOk'] === false">
-                                        api/v1/auth-user -
+                                        api/v1/logout -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[1]['responseCode'] + ', Took:' + docs[1]['responseTime'] + 'ms'">
@@ -218,7 +218,7 @@
                     </tr>
                                         <tr v-if="!docs[2]['isHidden']">
                         <td>
-                            <a href="#POST-api/v1/cart-item-quantity-set/{cartItemIndex}" @click="highlightSidebar(2)" >
+                            <a href="#GET-api/v1/cart-items" @click="highlightSidebar(2)" >
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -230,25 +230,25 @@
                                     font-bold
                                     leading-none
                                     rounded
-                                    text--100 bg--500
-                                    text-black bg-red-500
+                                    text-green-100 bg-green-500
+                                    text- bg--500
                                     text--100 bg--500
                                     text--100 bg--500
                                     text- bg-
                                     ">
-                                    POST
+                                    GET
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[2]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[2]['responseOk'] === null">api/v1/cart-item-quantity-set/{cartItemIndex}</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[2]['responseOk'] === null">api/v1/cart-items</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[2]['responseOk'] === true">
-                                        api/v1/cart-item-quantity-set/{cartItemIndex} -
+                                        api/v1/cart-items -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[2]['responseCode'] + ', Took:' + docs[2]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[2]['responseOk'] === false">
-                                        api/v1/cart-item-quantity-set/{cartItemIndex} -
+                                        api/v1/cart-items -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[2]['responseCode'] + ', Took:' + docs[2]['responseTime'] + 'ms'">
@@ -260,7 +260,7 @@
                     </tr>
                                         <tr v-if="!docs[3]['isHidden']">
                         <td>
-                            <a href="#GET-api/v1/cart-items" @click="highlightSidebar(3)" >
+                            <a href="#GET-api/v1/orders" @click="highlightSidebar(3)" >
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -281,16 +281,16 @@
                                     GET
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[3]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[3]['responseOk'] === null">api/v1/cart-items</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[3]['responseOk'] === null">api/v1/orders</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[3]['responseOk'] === true">
-                                        api/v1/cart-items -
+                                        api/v1/orders -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[3]['responseCode'] + ', Took:' + docs[3]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[3]['responseOk'] === false">
-                                        api/v1/cart-items -
+                                        api/v1/orders -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[3]['responseCode'] + ', Took:' + docs[3]['responseTime'] + 'ms'">
@@ -302,7 +302,7 @@
                     </tr>
                                         <tr v-if="!docs[4]['isHidden']">
                         <td>
-                            <a href="#DELETE-api/v1/clear-cart" @click="highlightSidebar(4)" >
+                            <a href="#POST-api/v1/register" @click="highlightSidebar(4)" >
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -315,24 +315,24 @@
                                     leading-none
                                     rounded
                                     text--100 bg--500
-                                    text- bg--500
+                                    text-black bg-red-500
                                     text--100 bg--500
                                     text--100 bg--500
-                                    text-white bg-black
+                                    text- bg-
                                     ">
-                                    DELETE
+                                    POST
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[4]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[4]['responseOk'] === null">api/v1/clear-cart</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[4]['responseOk'] === null">api/v1/register</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[4]['responseOk'] === true">
-                                        api/v1/clear-cart -
+                                        api/v1/register -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[4]['responseCode'] + ', Took:' + docs[4]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[4]['responseOk'] === false">
-                                        api/v1/clear-cart -
+                                        api/v1/register -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[4]['responseCode'] + ', Took:' + docs[4]['responseTime'] + 'ms'">
@@ -344,7 +344,7 @@
                     </tr>
                                         <tr v-if="!docs[5]['isHidden']">
                         <td>
-                            <a href="#POST-api/v1/decrement-cart-item/{cartItemIndex}" @click="highlightSidebar(5)" >
+                            <a href="#POST-api/v1/login" @click="highlightSidebar(5)" >
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -365,16 +365,16 @@
                                     POST
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[5]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[5]['responseOk'] === null">api/v1/decrement-cart-item/{cartItemIndex}</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[5]['responseOk'] === null">api/v1/login</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[5]['responseOk'] === true">
-                                        api/v1/decrement-cart-item/{cartItemIndex} -
+                                        api/v1/login -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[5]['responseCode'] + ', Took:' + docs[5]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[5]['responseOk'] === false">
-                                        api/v1/decrement-cart-item/{cartItemIndex} -
+                                        api/v1/login -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[5]['responseCode'] + ', Took:' + docs[5]['responseTime'] + 'ms'">
@@ -386,7 +386,7 @@
                     </tr>
                                         <tr v-if="!docs[6]['isHidden']">
                         <td>
-                            <a href="#POST-api/v1/increment-cart-item/{cartItemIndex}" @click="highlightSidebar(6)" >
+                            <a href="#POST-api/v1/products-import" @click="highlightSidebar(6)" >
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -407,16 +407,16 @@
                                     POST
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[6]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[6]['responseOk'] === null">api/v1/increment-cart-item/{cartItemIndex}</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[6]['responseOk'] === null">api/v1/products-import</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[6]['responseOk'] === true">
-                                        api/v1/increment-cart-item/{cartItemIndex} -
+                                        api/v1/products-import -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[6]['responseCode'] + ', Took:' + docs[6]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[6]['responseOk'] === false">
-                                        api/v1/increment-cart-item/{cartItemIndex} -
+                                        api/v1/products-import -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[6]['responseCode'] + ', Took:' + docs[6]['responseTime'] + 'ms'">
@@ -428,7 +428,7 @@
                     </tr>
                                         <tr v-if="!docs[7]['isHidden']">
                         <td>
-                            <a href="#POST-api/v1/login" @click="highlightSidebar(7)" >
+                            <a href="#POST-api/v1/add-to-cart" @click="highlightSidebar(7)" >
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -449,16 +449,16 @@
                                     POST
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[7]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[7]['responseOk'] === null">api/v1/login</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[7]['responseOk'] === null">api/v1/add-to-cart</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[7]['responseOk'] === true">
-                                        api/v1/login -
+                                        api/v1/add-to-cart -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[7]['responseCode'] + ', Took:' + docs[7]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[7]['responseOk'] === false">
-                                        api/v1/login -
+                                        api/v1/add-to-cart -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[7]['responseCode'] + ', Took:' + docs[7]['responseTime'] + 'ms'">
@@ -470,7 +470,7 @@
                     </tr>
                                         <tr v-if="!docs[8]['isHidden']">
                         <td>
-                            <a href="#GET-api/v1/logout" @click="highlightSidebar(8)" >
+                            <a href="#POST-api/v1/cart-item-quantity-set/{cartItemIndex}" @click="highlightSidebar(8)" >
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -482,25 +482,25 @@
                                     font-bold
                                     leading-none
                                     rounded
-                                    text-green-100 bg-green-500
-                                    text- bg--500
+                                    text--100 bg--500
+                                    text-black bg-red-500
                                     text--100 bg--500
                                     text--100 bg--500
                                     text- bg-
                                     ">
-                                    GET
+                                    POST
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[8]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[8]['responseOk'] === null">api/v1/logout</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[8]['responseOk'] === null">api/v1/cart-item-quantity-set/{cartItemIndex}</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[8]['responseOk'] === true">
-                                        api/v1/logout -
+                                        api/v1/cart-item-quantity-set/{cartItemIndex} -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[8]['responseCode'] + ', Took:' + docs[8]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[8]['responseOk'] === false">
-                                        api/v1/logout -
+                                        api/v1/cart-item-quantity-set/{cartItemIndex} -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[8]['responseCode'] + ', Took:' + docs[8]['responseTime'] + 'ms'">
@@ -512,7 +512,7 @@
                     </tr>
                                         <tr v-if="!docs[9]['isHidden']">
                         <td>
-                            <a href="#POST-api/v1/orders" @click="highlightSidebar(9)" >
+                            <a href="#POST-api/v1/increment-cart-item/{cartItemIndex}" @click="highlightSidebar(9)" >
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -533,16 +533,16 @@
                                     POST
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[9]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[9]['responseOk'] === null">api/v1/orders</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[9]['responseOk'] === null">api/v1/increment-cart-item/{cartItemIndex}</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[9]['responseOk'] === true">
-                                        api/v1/orders -
+                                        api/v1/increment-cart-item/{cartItemIndex} -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[9]['responseCode'] + ', Took:' + docs[9]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[9]['responseOk'] === false">
-                                        api/v1/orders -
+                                        api/v1/increment-cart-item/{cartItemIndex} -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[9]['responseCode'] + ', Took:' + docs[9]['responseTime'] + 'ms'">
@@ -554,7 +554,7 @@
                     </tr>
                                         <tr v-if="!docs[10]['isHidden']">
                         <td>
-                            <a href="#GET-api/v1/orders" @click="highlightSidebar(10)" >
+                            <a href="#POST-api/v1/decrement-cart-item/{cartItemIndex}" @click="highlightSidebar(10)" >
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -566,25 +566,25 @@
                                     font-bold
                                     leading-none
                                     rounded
-                                    text-green-100 bg-green-500
-                                    text- bg--500
+                                    text--100 bg--500
+                                    text-black bg-red-500
                                     text--100 bg--500
                                     text--100 bg--500
                                     text- bg-
                                     ">
-                                    GET
+                                    POST
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[10]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[10]['responseOk'] === null">api/v1/orders</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[10]['responseOk'] === null">api/v1/decrement-cart-item/{cartItemIndex}</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[10]['responseOk'] === true">
-                                        api/v1/orders -
+                                        api/v1/decrement-cart-item/{cartItemIndex} -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[10]['responseCode'] + ', Took:' + docs[10]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[10]['responseOk'] === false">
-                                        api/v1/orders -
+                                        api/v1/decrement-cart-item/{cartItemIndex} -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[10]['responseCode'] + ', Took:' + docs[10]['responseTime'] + 'ms'">
@@ -596,7 +596,7 @@
                     </tr>
                                         <tr v-if="!docs[11]['isHidden']">
                         <td>
-                            <a href="#POST-api/v1/products-import" @click="highlightSidebar(11)" >
+                            <a href="#POST-api/v1/orders" @click="highlightSidebar(11)" >
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -617,16 +617,16 @@
                                     POST
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[11]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[11]['responseOk'] === null">api/v1/products-import</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[11]['responseOk'] === null">api/v1/orders</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[11]['responseOk'] === true">
-                                        api/v1/products-import -
+                                        api/v1/orders -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[11]['responseCode'] + ', Took:' + docs[11]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[11]['responseOk'] === false">
-                                        api/v1/products-import -
+                                        api/v1/orders -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[11]['responseCode'] + ', Took:' + docs[11]['responseTime'] + 'ms'">
@@ -638,7 +638,7 @@
                     </tr>
                                         <tr v-if="!docs[12]['isHidden']">
                         <td>
-                            <a href="#POST-api/v1/register" @click="highlightSidebar(12)" >
+                            <a href="#DELETE-api/v1/remove-from-cart/{cartItemIndex}" @click="highlightSidebar(12)" >
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -651,24 +651,24 @@
                                     leading-none
                                     rounded
                                     text--100 bg--500
-                                    text-black bg-red-500
+                                    text- bg--500
                                     text--100 bg--500
                                     text--100 bg--500
-                                    text- bg-
+                                    text-white bg-black
                                     ">
-                                    POST
+                                    DELETE
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[12]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[12]['responseOk'] === null">api/v1/register</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[12]['responseOk'] === null">api/v1/remove-from-cart/{cartItemIndex}</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[12]['responseOk'] === true">
-                                        api/v1/register -
+                                        api/v1/remove-from-cart/{cartItemIndex} -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[12]['responseCode'] + ', Took:' + docs[12]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[12]['responseOk'] === false">
-                                        api/v1/register -
+                                        api/v1/remove-from-cart/{cartItemIndex} -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[12]['responseCode'] + ', Took:' + docs[12]['responseTime'] + 'ms'">
@@ -680,7 +680,7 @@
                     </tr>
                                         <tr v-if="!docs[13]['isHidden']">
                         <td>
-                            <a href="#DELETE-api/v1/remove-from-cart/{cartItemIndex}" @click="highlightSidebar(13)" >
+                            <a href="#DELETE-api/v1/clear-cart" @click="highlightSidebar(13)" >
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -701,16 +701,16 @@
                                     DELETE
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[13]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[13]['responseOk'] === null">api/v1/remove-from-cart/{cartItemIndex}</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[13]['responseOk'] === null">api/v1/clear-cart</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[13]['responseOk'] === true">
-                                        api/v1/remove-from-cart/{cartItemIndex} -
+                                        api/v1/clear-cart -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[13]['responseCode'] + ', Took:' + docs[13]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[13]['responseOk'] === false">
-                                        api/v1/remove-from-cart/{cartItemIndex} -
+                                        api/v1/clear-cart -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[13]['responseCode'] + ', Took:' + docs[13]['responseTime'] + 'ms'">
@@ -731,7 +731,7 @@
             <hr class="border-b border-gray-300">
             <br>
                         <section class="pt-5 pl-2 pr-2 pb-5 border-2 mb-10 rounded bg-white shadow" v-if="!docs[0]['isHidden']">
-                <div class="border-2 rounded" id="POST-api/v1/add-to-cart">
+                <div class="border-2 rounded" id="GET-api/v1/auth-user">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -746,16 +746,16 @@
                         font-bold
                         leading-none
                         rounded
-                        text--100 bg--500
-                        text-black bg-red-500
+                        text-green-100 bg-green-500
+                        text- bg--500
                         text--100 bg--500
                         text--100 bg--500
                         text- bg-
                         ">
-                        POST
+                        GET
                     </span>
                     <span class="">
-                        <a href="#POST-api/v1/add-to-cart">api/v1/add-to-cart</a>
+                        <a href="#GET-api/v1/auth-user">api/v1/auth-user</a>
                     </span>
                 </h1>
                 </div>
@@ -763,21 +763,21 @@
                     <tbody>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
-                            <td class="align-left pl-2 pr-2 font-bold break-all">POST</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">GET</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v1/add-to-cart">{{window.location.origin}}/api/v1/add-to-cart</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v1/auth-user">{{window.location.origin}}/api/v1/auth-user</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
-                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\CartController</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\AuthController</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@addToCart</td>
+                            <td class="align-left pl-2 pr-2 break-all">@authUser</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
@@ -793,60 +793,6 @@
                     <h3 class="font-bold">Description</h3>
                     <hr>
                     <vue-markdown class="mt-2"></vue-markdown>
-                </div>
-                                <div class="border-2 mr-4 mt-4 p-4 rounded">
-                <h3 class="font-bold">Attributes</h3>
-                <hr>
-                <table class="table-fixed align-left text-sm mt-3">
-                    <thead class="border">
-                    <tr class="border">
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">No.</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Attributes</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Type</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Nullable</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Bail</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Rules</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                                        <tr class="border">
-                        <td class="border pl-3 pt-1 pb-1 pr-2">1</td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
-                            product_id
-                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
-                                                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2">
-                                                                                                                                                                                                                                                            								                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pr-2 break-all">
-                            <div class="font-mono">
-                                                                                                                                                                                                                                    exists:App\Models\Product,id
-                                                                                                                                                                                    </div>
-                        </td>
-                    </tr>
-                                        <tr class="border">
-                        <td class="border pl-3 pt-1 pb-1 pr-2">2</td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
-                            quantity
-                                                                                                                </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2">
-                                                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-blue-800 bg-blue-300 rounded">Numeric</span>
-                                                                                                                                                                                                								                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
-                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none rounded">Nullable</span>
-                                                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pr-2 break-all">
-                            <div class="font-mono">
-                                                                                                                                                                                                                                                                                        </div>
-                        </td>
-                    </tr>
-                                        </tbody>
-                </table>
                 </div>
                                 <button
                     class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
@@ -884,14 +830,6 @@
                             style="padding:15px 0px 15px 0px;min-height:20px;background:#2d2d2d;color: #ccc;resize:both;"
                             v-model="docs[0]['url']" :highlight="highlighter" line-numbers></prism-editor>
                             <br>
-                                                        <h3 class="font-medium">REQUEST BODY<sup class="text-red-500"> *required</sup></h3>
-                            <p class="text-xs pb-2 font-medium text-gray-500">JSON body for the POST|PUT|DELETE request</p>
-                            <prism-editor
-                                class="my-prism-editor"
-                                style="min-height:200px;background:#2d2d2d;color: #ccc;resize:both"
-                                v-model="docs[0]['body']"
-                                :highlight="highlighter"
-                                line-numbers></prism-editor>
                                                     </div>
                     </div>
                     <hr class="border-b border-dotted mt-4 mb-2 border-gray-300">
@@ -1032,7 +970,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border-2 mb-10 rounded bg-white shadow" v-if="!docs[1]['isHidden']">
-                <div class="border-2 rounded" id="GET-api/v1/auth-user">
+                <div class="border-2 rounded" id="GET-api/v1/logout">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -1056,7 +994,7 @@
                         GET
                     </span>
                     <span class="">
-                        <a href="#GET-api/v1/auth-user">api/v1/auth-user</a>
+                        <a href="#GET-api/v1/logout">api/v1/logout</a>
                     </span>
                 </h1>
                 </div>
@@ -1069,7 +1007,7 @@
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v1/auth-user">{{window.location.origin}}/api/v1/auth-user</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v1/logout">{{window.location.origin}}/api/v1/logout</a>
                             </td>
                         </tr>
                         <tr>
@@ -1078,7 +1016,7 @@
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@authUser</td>
+                            <td class="align-left pl-2 pr-2 break-all">@logout</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
@@ -1271,7 +1209,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border-2 mb-10 rounded bg-white shadow" v-if="!docs[2]['isHidden']">
-                <div class="border-2 rounded" id="POST-api/v1/cart-item-quantity-set/{cartItemIndex}">
+                <div class="border-2 rounded" id="GET-api/v1/cart-items">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -1286,16 +1224,16 @@
                         font-bold
                         leading-none
                         rounded
-                        text--100 bg--500
-                        text-black bg-red-500
+                        text-green-100 bg-green-500
+                        text- bg--500
                         text--100 bg--500
                         text--100 bg--500
                         text- bg-
                         ">
-                        POST
+                        GET
                     </span>
                     <span class="">
-                        <a href="#POST-api/v1/cart-item-quantity-set/{cartItemIndex}">api/v1/cart-item-quantity-set/{cartItemIndex}</a>
+                        <a href="#GET-api/v1/cart-items">api/v1/cart-items</a>
                     </span>
                 </h1>
                 </div>
@@ -1303,12 +1241,12 @@
                     <tbody>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
-                            <td class="align-left pl-2 pr-2 font-bold break-all">POST</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">GET</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v1/cart-item-quantity-set/{cartItemIndex}">{{window.location.origin}}/api/v1/cart-item-quantity-set/{cartItemIndex}</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v1/cart-items">{{window.location.origin}}/api/v1/cart-items</a>
                             </td>
                         </tr>
                         <tr>
@@ -1317,7 +1255,7 @@
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@cartItemQuantitySet</td>
+                            <td class="align-left pl-2 pr-2 break-all">@cartItems</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
@@ -1333,43 +1271,6 @@
                     <h3 class="font-bold">Description</h3>
                     <hr>
                     <vue-markdown class="mt-2"></vue-markdown>
-                </div>
-                                <div class="border-2 mr-4 mt-4 p-4 rounded">
-                <h3 class="font-bold">Attributes</h3>
-                <hr>
-                <table class="table-fixed align-left text-sm mt-3">
-                    <thead class="border">
-                    <tr class="border">
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">No.</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Attributes</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Type</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Nullable</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Bail</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Rules</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                                        <tr class="border">
-                        <td class="border pl-3 pt-1 pb-1 pr-2">1</td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
-                            quantity
-                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
-                                                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2">
-                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-blue-800 bg-blue-300 rounded">Integer</span>
-                                                                                                                                                                                                                                								                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pr-2 break-all">
-                            <div class="font-mono">
-                                                                                                                                                                                                                                                                                                                gt:0
-                                                                                                                                                                                    </div>
-                        </td>
-                    </tr>
-                                        </tbody>
-                </table>
                 </div>
                                 <button
                     class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
@@ -1407,14 +1308,6 @@
                             style="padding:15px 0px 15px 0px;min-height:20px;background:#2d2d2d;color: #ccc;resize:both;"
                             v-model="docs[2]['url']" :highlight="highlighter" line-numbers></prism-editor>
                             <br>
-                                                        <h3 class="font-medium">REQUEST BODY<sup class="text-red-500"> *required</sup></h3>
-                            <p class="text-xs pb-2 font-medium text-gray-500">JSON body for the POST|PUT|DELETE request</p>
-                            <prism-editor
-                                class="my-prism-editor"
-                                style="min-height:200px;background:#2d2d2d;color: #ccc;resize:both"
-                                v-model="docs[2]['body']"
-                                :highlight="highlighter"
-                                line-numbers></prism-editor>
                                                     </div>
                     </div>
                     <hr class="border-b border-dotted mt-4 mb-2 border-gray-300">
@@ -1555,7 +1448,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border-2 mb-10 rounded bg-white shadow" v-if="!docs[3]['isHidden']">
-                <div class="border-2 rounded" id="GET-api/v1/cart-items">
+                <div class="border-2 rounded" id="GET-api/v1/orders">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -1579,7 +1472,7 @@
                         GET
                     </span>
                     <span class="">
-                        <a href="#GET-api/v1/cart-items">api/v1/cart-items</a>
+                        <a href="#GET-api/v1/orders">api/v1/orders</a>
                     </span>
                 </h1>
                 </div>
@@ -1592,16 +1485,16 @@
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v1/cart-items">{{window.location.origin}}/api/v1/cart-items</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v1/orders">{{window.location.origin}}/api/v1/orders</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
-                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\CartController</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\OrderController</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@cartItems</td>
+                            <td class="align-left pl-2 pr-2 break-all">@index</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
@@ -1794,7 +1687,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border-2 mb-10 rounded bg-white shadow" v-if="!docs[4]['isHidden']">
-                <div class="border-2 rounded" id="DELETE-api/v1/clear-cart">
+                <div class="border-2 rounded" id="POST-api/v1/register">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -1810,15 +1703,15 @@
                         leading-none
                         rounded
                         text--100 bg--500
-                        text- bg--500
+                        text-black bg-red-500
                         text--100 bg--500
                         text--100 bg--500
-                        text-white bg-black
+                        text- bg-
                         ">
-                        DELETE
+                        POST
                     </span>
                     <span class="">
-                        <a href="#DELETE-api/v1/clear-cart">api/v1/clear-cart</a>
+                        <a href="#POST-api/v1/register">api/v1/register</a>
                     </span>
                 </h1>
                 </div>
@@ -1826,29 +1719,25 @@
                     <tbody>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
-                            <td class="align-left pl-2 pr-2 font-bold break-all">DELETE</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">POST</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v1/clear-cart">{{window.location.origin}}/api/v1/clear-cart</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v1/register">{{window.location.origin}}/api/v1/register</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
-                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\CartController</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\AuthController</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@clearCart</td>
+                            <td class="align-left pl-2 pr-2 break-all">@register</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
                                 <td class="align-left pl-2 pr-2 break-all">api</td>
-                            </tr>
-                                                    <tr>
-                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 2</td>
-                                <td class="align-left pl-2 pr-2 break-all">auth:api</td>
                             </tr>
                                             </tbody>
                 </table>
@@ -1856,6 +1745,100 @@
                     <h3 class="font-bold">Description</h3>
                     <hr>
                     <vue-markdown class="mt-2"></vue-markdown>
+                </div>
+                                <div class="border-2 mr-4 mt-4 p-4 rounded">
+                <h3 class="font-bold">Attributes</h3>
+                <hr>
+                <table class="table-fixed align-left text-sm mt-3">
+                    <thead class="border">
+                    <tr class="border">
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">No.</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Attributes</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Type</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Nullable</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Bail</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Rules</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">1</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            name
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-green-100 bg-green-500 rounded">String</span>
+                                                                                                                                                                								                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                                                                                                        </div>
+                        </td>
+                    </tr>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">2</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            email
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                                                                                                                                                            								                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                                                    email
+                                                                                        <span class="text-gray-900 font-bold">|</span>
+                                                                                                                                                                                                            Illuminate\Validation\Rules\Unique
+                                                                                                                                                                                    </div>
+                        </td>
+                    </tr>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">3</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            password_confirmation
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                                                                                                                                                            								                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                                                    min:6
+                                                                                                                                                                                    </div>
+                        </td>
+                    </tr>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">4</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            password
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                                                                                                                                                            								                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                                                    min:6
+                                                                                        <span class="text-gray-900 font-bold">|</span>
+                                                                                                                                                                                                            confirmed
+                                                                                                                                                                                    </div>
+                        </td>
+                    </tr>
+                                        </tbody>
+                </table>
                 </div>
                                 <button
                     class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
@@ -2041,7 +2024,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border-2 mb-10 rounded bg-white shadow" v-if="!docs[5]['isHidden']">
-                <div class="border-2 rounded" id="POST-api/v1/decrement-cart-item/{cartItemIndex}">
+                <div class="border-2 rounded" id="POST-api/v1/login">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -2065,7 +2048,7 @@
                         POST
                     </span>
                     <span class="">
-                        <a href="#POST-api/v1/decrement-cart-item/{cartItemIndex}">api/v1/decrement-cart-item/{cartItemIndex}</a>
+                        <a href="#POST-api/v1/login">api/v1/login</a>
                     </span>
                 </h1>
                 </div>
@@ -2078,24 +2061,20 @@
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v1/decrement-cart-item/{cartItemIndex}">{{window.location.origin}}/api/v1/decrement-cart-item/{cartItemIndex}</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v1/login">{{window.location.origin}}/api/v1/login</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
-                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\CartController</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\AuthController</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@decrementCartItem</td>
+                            <td class="align-left pl-2 pr-2 break-all">@login</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
                                 <td class="align-left pl-2 pr-2 break-all">api</td>
-                            </tr>
-                                                    <tr>
-                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 2</td>
-                                <td class="align-left pl-2 pr-2 break-all">auth:api</td>
                             </tr>
                                             </tbody>
                 </table>
@@ -2103,6 +2082,59 @@
                     <h3 class="font-bold">Description</h3>
                     <hr>
                     <vue-markdown class="mt-2"></vue-markdown>
+                </div>
+                                <div class="border-2 mr-4 mt-4 p-4 rounded">
+                <h3 class="font-bold">Attributes</h3>
+                <hr>
+                <table class="table-fixed align-left text-sm mt-3">
+                    <thead class="border">
+                    <tr class="border">
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">No.</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Attributes</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Type</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Nullable</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Bail</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Rules</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">1</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            email
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                                                                                                                                                            								                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                                                    email
+                                                                                                                                                                                    </div>
+                        </td>
+                    </tr>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">2</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            password
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                                                                                                                                                            								                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                            </div>
+                        </td>
+                    </tr>
+                                        </tbody>
+                </table>
                 </div>
                                 <button
                     class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
@@ -2288,7 +2320,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border-2 mb-10 rounded bg-white shadow" v-if="!docs[6]['isHidden']">
-                <div class="border-2 rounded" id="POST-api/v1/increment-cart-item/{cartItemIndex}">
+                <div class="border-2 rounded" id="POST-api/v1/products-import">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -2312,7 +2344,7 @@
                         POST
                     </span>
                     <span class="">
-                        <a href="#POST-api/v1/increment-cart-item/{cartItemIndex}">api/v1/increment-cart-item/{cartItemIndex}</a>
+                        <a href="#POST-api/v1/products-import">api/v1/products-import</a>
                     </span>
                 </h1>
                 </div>
@@ -2325,24 +2357,20 @@
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v1/increment-cart-item/{cartItemIndex}">{{window.location.origin}}/api/v1/increment-cart-item/{cartItemIndex}</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v1/products-import">{{window.location.origin}}/api/v1/products-import</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
-                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\CartController</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\ProductController</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@incrementCartItem</td>
+                            <td class="align-left pl-2 pr-2 break-all">@import</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
                                 <td class="align-left pl-2 pr-2 break-all">api</td>
-                            </tr>
-                                                    <tr>
-                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 2</td>
-                                <td class="align-left pl-2 pr-2 break-all">auth:api</td>
                             </tr>
                                             </tbody>
                 </table>
@@ -2350,6 +2378,43 @@
                     <h3 class="font-bold">Description</h3>
                     <hr>
                     <vue-markdown class="mt-2"></vue-markdown>
+                </div>
+                                <div class="border-2 mr-4 mt-4 p-4 rounded">
+                <h3 class="font-bold">Attributes</h3>
+                <hr>
+                <table class="table-fixed align-left text-sm mt-3">
+                    <thead class="border">
+                    <tr class="border">
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">No.</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Attributes</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Type</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Nullable</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Bail</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Rules</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">1</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            csv_file
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                                                                                                                                                            								                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-green-400 rounded">File</span>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                                                                                                                                mimes:csv
+                                                                                                                                                                                    </div>
+                        </td>
+                    </tr>
+                                        </tbody>
+                </table>
                 </div>
                                 <button
                     class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
@@ -2535,7 +2600,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border-2 mb-10 rounded bg-white shadow" v-if="!docs[7]['isHidden']">
-                <div class="border-2 rounded" id="POST-api/v1/login">
+                <div class="border-2 rounded" id="POST-api/v1/add-to-cart">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -2559,7 +2624,7 @@
                         POST
                     </span>
                     <span class="">
-                        <a href="#POST-api/v1/login">api/v1/login</a>
+                        <a href="#POST-api/v1/add-to-cart">api/v1/add-to-cart</a>
                     </span>
                 </h1>
                 </div>
@@ -2572,20 +2637,24 @@
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v1/login">{{window.location.origin}}/api/v1/login</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v1/add-to-cart">{{window.location.origin}}/api/v1/add-to-cart</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
-                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\AuthController</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\CartController</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@login</td>
+                            <td class="align-left pl-2 pr-2 break-all">@addToCart</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
                                 <td class="align-left pl-2 pr-2 break-all">api</td>
+                            </tr>
+                                                    <tr>
+                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 2</td>
+                                <td class="align-left pl-2 pr-2 break-all">auth:api</td>
                             </tr>
                                             </tbody>
                 </table>
@@ -2612,7 +2681,7 @@
                                         <tr class="border">
                         <td class="border pl-3 pt-1 pb-1 pr-2">1</td>
                         <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
-                            email
+                            product_id
                                                                                             <sup class="text-red-500 font-bold"> *required</sup>
                                                                                     </td>
                         <td class="border pl-3 pt-1 pb-1 pr-2">
@@ -2623,25 +2692,26 @@
                                                                                                                 </td>
                         <td class="border pl-3 pr-2 break-all">
                             <div class="font-mono">
-                                                                                                                                                                                                                                    email
+                                                                                                                                                                                                                                    exists:App\Models\Product,id
                                                                                                                                                                                     </div>
                         </td>
                     </tr>
                                         <tr class="border">
                         <td class="border pl-3 pt-1 pb-1 pr-2">2</td>
                         <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
-                            password
-                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
-                                                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2">
-                                                                                                                                                                                                                                                            								                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                            quantity
                                                                                                                 </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-blue-800 bg-blue-300 rounded">Numeric</span>
+                                                                                                                                                                                                								                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none rounded">Nullable</span>
+                                                                                    </td>
                         <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
                                                                                                                 </td>
                         <td class="border pl-3 pr-2 break-all">
                             <div class="font-mono">
-                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                        </div>
                         </td>
                     </tr>
                                         </tbody>
@@ -2831,7 +2901,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border-2 mb-10 rounded bg-white shadow" v-if="!docs[8]['isHidden']">
-                <div class="border-2 rounded" id="GET-api/v1/logout">
+                <div class="border-2 rounded" id="POST-api/v1/cart-item-quantity-set/{cartItemIndex}">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -2846,16 +2916,16 @@
                         font-bold
                         leading-none
                         rounded
-                        text-green-100 bg-green-500
-                        text- bg--500
+                        text--100 bg--500
+                        text-black bg-red-500
                         text--100 bg--500
                         text--100 bg--500
                         text- bg-
                         ">
-                        GET
+                        POST
                     </span>
                     <span class="">
-                        <a href="#GET-api/v1/logout">api/v1/logout</a>
+                        <a href="#POST-api/v1/cart-item-quantity-set/{cartItemIndex}">api/v1/cart-item-quantity-set/{cartItemIndex}</a>
                     </span>
                 </h1>
                 </div>
@@ -2863,21 +2933,21 @@
                     <tbody>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
-                            <td class="align-left pl-2 pr-2 font-bold break-all">GET</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">POST</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v1/logout">{{window.location.origin}}/api/v1/logout</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v1/cart-item-quantity-set/{cartItemIndex}">{{window.location.origin}}/api/v1/cart-item-quantity-set/{cartItemIndex}</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
-                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\AuthController</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\CartController</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@logout</td>
+                            <td class="align-left pl-2 pr-2 break-all">@cartItemQuantitySet</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
@@ -2893,6 +2963,43 @@
                     <h3 class="font-bold">Description</h3>
                     <hr>
                     <vue-markdown class="mt-2"></vue-markdown>
+                </div>
+                                <div class="border-2 mr-4 mt-4 p-4 rounded">
+                <h3 class="font-bold">Attributes</h3>
+                <hr>
+                <table class="table-fixed align-left text-sm mt-3">
+                    <thead class="border">
+                    <tr class="border">
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">No.</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Attributes</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Type</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Nullable</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Bail</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Rules</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">1</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            quantity
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-blue-800 bg-blue-300 rounded">Integer</span>
+                                                                                                                                                                                                                                								                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                                                                                                                                gt:0
+                                                                                                                                                                                    </div>
+                        </td>
+                    </tr>
+                                        </tbody>
+                </table>
                 </div>
                                 <button
                     class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
@@ -2930,6 +3037,14 @@
                             style="padding:15px 0px 15px 0px;min-height:20px;background:#2d2d2d;color: #ccc;resize:both;"
                             v-model="docs[8]['url']" :highlight="highlighter" line-numbers></prism-editor>
                             <br>
+                                                        <h3 class="font-medium">REQUEST BODY<sup class="text-red-500"> *required</sup></h3>
+                            <p class="text-xs pb-2 font-medium text-gray-500">JSON body for the POST|PUT|DELETE request</p>
+                            <prism-editor
+                                class="my-prism-editor"
+                                style="min-height:200px;background:#2d2d2d;color: #ccc;resize:both"
+                                v-model="docs[8]['body']"
+                                :highlight="highlighter"
+                                line-numbers></prism-editor>
                                                     </div>
                     </div>
                     <hr class="border-b border-dotted mt-4 mb-2 border-gray-300">
@@ -3070,7 +3185,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border-2 mb-10 rounded bg-white shadow" v-if="!docs[9]['isHidden']">
-                <div class="border-2 rounded" id="POST-api/v1/orders">
+                <div class="border-2 rounded" id="POST-api/v1/increment-cart-item/{cartItemIndex}">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -3094,7 +3209,7 @@
                         POST
                     </span>
                     <span class="">
-                        <a href="#POST-api/v1/orders">api/v1/orders</a>
+                        <a href="#POST-api/v1/increment-cart-item/{cartItemIndex}">api/v1/increment-cart-item/{cartItemIndex}</a>
                     </span>
                 </h1>
                 </div>
@@ -3107,16 +3222,16 @@
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v1/orders">{{window.location.origin}}/api/v1/orders</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v1/increment-cart-item/{cartItemIndex}">{{window.location.origin}}/api/v1/increment-cart-item/{cartItemIndex}</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
-                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\OrderController</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\CartController</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@store</td>
+                            <td class="align-left pl-2 pr-2 break-all">@incrementCartItem</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
@@ -3132,42 +3247,6 @@
                     <h3 class="font-bold">Description</h3>
                     <hr>
                     <vue-markdown class="mt-2"></vue-markdown>
-                </div>
-                                <div class="border-2 mr-4 mt-4 p-4 rounded">
-                <h3 class="font-bold">Attributes</h3>
-                <hr>
-                <table class="table-fixed align-left text-sm mt-3">
-                    <thead class="border">
-                    <tr class="border">
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">No.</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Attributes</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Type</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Nullable</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Bail</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Rules</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                                        <tr class="border">
-                        <td class="border pl-3 pt-1 pb-1 pr-2">1</td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
-                            shipping_address
-                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
-                                                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2">
-                                                                                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-green-100 bg-green-500 rounded">String</span>
-                                                                                                                                                                								                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pr-2 break-all">
-                            <div class="font-mono">
-                                                                                                                                                                                                                                                                                        </div>
-                        </td>
-                    </tr>
-                                        </tbody>
-                </table>
                 </div>
                                 <button
                     class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
@@ -3353,7 +3432,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border-2 mb-10 rounded bg-white shadow" v-if="!docs[10]['isHidden']">
-                <div class="border-2 rounded" id="GET-api/v1/orders">
+                <div class="border-2 rounded" id="POST-api/v1/decrement-cart-item/{cartItemIndex}">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -3368,16 +3447,16 @@
                         font-bold
                         leading-none
                         rounded
-                        text-green-100 bg-green-500
-                        text- bg--500
+                        text--100 bg--500
+                        text-black bg-red-500
                         text--100 bg--500
                         text--100 bg--500
                         text- bg-
                         ">
-                        GET
+                        POST
                     </span>
                     <span class="">
-                        <a href="#GET-api/v1/orders">api/v1/orders</a>
+                        <a href="#POST-api/v1/decrement-cart-item/{cartItemIndex}">api/v1/decrement-cart-item/{cartItemIndex}</a>
                     </span>
                 </h1>
                 </div>
@@ -3385,21 +3464,21 @@
                     <tbody>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
-                            <td class="align-left pl-2 pr-2 font-bold break-all">GET</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">POST</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v1/orders">{{window.location.origin}}/api/v1/orders</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v1/decrement-cart-item/{cartItemIndex}">{{window.location.origin}}/api/v1/decrement-cart-item/{cartItemIndex}</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
-                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\OrderController</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\CartController</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@index</td>
+                            <td class="align-left pl-2 pr-2 break-all">@decrementCartItem</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
@@ -3452,6 +3531,14 @@
                             style="padding:15px 0px 15px 0px;min-height:20px;background:#2d2d2d;color: #ccc;resize:both;"
                             v-model="docs[10]['url']" :highlight="highlighter" line-numbers></prism-editor>
                             <br>
+                                                        <h3 class="font-medium">REQUEST BODY<sup class="text-red-500"> *required</sup></h3>
+                            <p class="text-xs pb-2 font-medium text-gray-500">JSON body for the POST|PUT|DELETE request</p>
+                            <prism-editor
+                                class="my-prism-editor"
+                                style="min-height:200px;background:#2d2d2d;color: #ccc;resize:both"
+                                v-model="docs[10]['body']"
+                                :highlight="highlighter"
+                                line-numbers></prism-editor>
                                                     </div>
                     </div>
                     <hr class="border-b border-dotted mt-4 mb-2 border-gray-300">
@@ -3592,7 +3679,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border-2 mb-10 rounded bg-white shadow" v-if="!docs[11]['isHidden']">
-                <div class="border-2 rounded" id="POST-api/v1/products-import">
+                <div class="border-2 rounded" id="POST-api/v1/orders">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -3616,7 +3703,7 @@
                         POST
                     </span>
                     <span class="">
-                        <a href="#POST-api/v1/products-import">api/v1/products-import</a>
+                        <a href="#POST-api/v1/orders">api/v1/orders</a>
                     </span>
                 </h1>
                 </div>
@@ -3629,20 +3716,24 @@
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v1/products-import">{{window.location.origin}}/api/v1/products-import</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v1/orders">{{window.location.origin}}/api/v1/orders</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
-                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\ProductController</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\OrderController</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@import</td>
+                            <td class="align-left pl-2 pr-2 break-all">@store</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
                                 <td class="align-left pl-2 pr-2 break-all">api</td>
+                            </tr>
+                                                    <tr>
+                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 2</td>
+                                <td class="align-left pl-2 pr-2 break-all">auth:api</td>
                             </tr>
                                             </tbody>
                 </table>
@@ -3669,20 +3760,19 @@
                                         <tr class="border">
                         <td class="border pl-3 pt-1 pb-1 pr-2">1</td>
                         <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
-                            csv_file
+                            shipping_address
                                                                                             <sup class="text-red-500 font-bold"> *required</sup>
                                                                                     </td>
                         <td class="border pl-3 pt-1 pb-1 pr-2">
-                                                                                                                                                                                                                                                            								                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-green-400 rounded">File</span>
-                                                                                    </td>
+                                                                                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-green-100 bg-green-500 rounded">String</span>
+                                                                                                                                                                								                                                    </td>
                         <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
                                                                                                                 </td>
                         <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
                                                                                                                 </td>
                         <td class="border pl-3 pr-2 break-all">
                             <div class="font-mono">
-                                                                                                                                                                                                                                                                                                                mimes:csv
-                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                        </div>
                         </td>
                     </tr>
                                         </tbody>
@@ -3872,7 +3962,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border-2 mb-10 rounded bg-white shadow" v-if="!docs[12]['isHidden']">
-                <div class="border-2 rounded" id="POST-api/v1/register">
+                <div class="border-2 rounded" id="DELETE-api/v1/remove-from-cart/{cartItemIndex}">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -3888,15 +3978,15 @@
                         leading-none
                         rounded
                         text--100 bg--500
-                        text-black bg-red-500
+                        text- bg--500
                         text--100 bg--500
                         text--100 bg--500
-                        text- bg-
+                        text-white bg-black
                         ">
-                        POST
+                        DELETE
                     </span>
                     <span class="">
-                        <a href="#POST-api/v1/register">api/v1/register</a>
+                        <a href="#DELETE-api/v1/remove-from-cart/{cartItemIndex}">api/v1/remove-from-cart/{cartItemIndex}</a>
                     </span>
                 </h1>
                 </div>
@@ -3904,25 +3994,29 @@
                     <tbody>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
-                            <td class="align-left pl-2 pr-2 font-bold break-all">POST</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">DELETE</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v1/register">{{window.location.origin}}/api/v1/register</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v1/remove-from-cart/{cartItemIndex}">{{window.location.origin}}/api/v1/remove-from-cart/{cartItemIndex}</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
-                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\AuthController</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\Api\V1\CartController</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@register</td>
+                            <td class="align-left pl-2 pr-2 break-all">@removeFromCart</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
                                 <td class="align-left pl-2 pr-2 break-all">api</td>
+                            </tr>
+                                                    <tr>
+                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 2</td>
+                                <td class="align-left pl-2 pr-2 break-all">auth:api</td>
                             </tr>
                                             </tbody>
                 </table>
@@ -3930,100 +4024,6 @@
                     <h3 class="font-bold">Description</h3>
                     <hr>
                     <vue-markdown class="mt-2"></vue-markdown>
-                </div>
-                                <div class="border-2 mr-4 mt-4 p-4 rounded">
-                <h3 class="font-bold">Attributes</h3>
-                <hr>
-                <table class="table-fixed align-left text-sm mt-3">
-                    <thead class="border">
-                    <tr class="border">
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">No.</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Attributes</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Type</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Nullable</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Bail</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Rules</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                                        <tr class="border">
-                        <td class="border pl-3 pt-1 pb-1 pr-2">1</td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
-                            name
-                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
-                                                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2">
-                                                                                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-green-100 bg-green-500 rounded">String</span>
-                                                                                                                                                                								                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pr-2 break-all">
-                            <div class="font-mono">
-                                                                                                                                                                                                                                                                                        </div>
-                        </td>
-                    </tr>
-                                        <tr class="border">
-                        <td class="border pl-3 pt-1 pb-1 pr-2">2</td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
-                            email
-                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
-                                                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2">
-                                                                                                                                                                                                                                                            								                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pr-2 break-all">
-                            <div class="font-mono">
-                                                                                                                                                                                                                                    email
-                                                                                        <span class="text-gray-900 font-bold">|</span>
-                                                                                                                                                                                                            Illuminate\Validation\Rules\Unique
-                                                                                                                                                                                    </div>
-                        </td>
-                    </tr>
-                                        <tr class="border">
-                        <td class="border pl-3 pt-1 pb-1 pr-2">3</td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
-                            password_confirmation
-                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
-                                                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2">
-                                                                                                                                                                                                                                                            								                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pr-2 break-all">
-                            <div class="font-mono">
-                                                                                                                                                                                                                                    min:6
-                                                                                                                                                                                    </div>
-                        </td>
-                    </tr>
-                                        <tr class="border">
-                        <td class="border pl-3 pt-1 pb-1 pr-2">4</td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
-                            password
-                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
-                                                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2">
-                                                                                                                                                                                                                                                            								                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pr-2 break-all">
-                            <div class="font-mono">
-                                                                                                                                                                                                                                    min:6
-                                                                                        <span class="text-gray-900 font-bold">|</span>
-                                                                                                                                                                                                            confirmed
-                                                                                                                                                                                    </div>
-                        </td>
-                    </tr>
-                                        </tbody>
-                </table>
                 </div>
                                 <button
                     class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
@@ -4209,7 +4209,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border-2 mb-10 rounded bg-white shadow" v-if="!docs[13]['isHidden']">
-                <div class="border-2 rounded" id="DELETE-api/v1/remove-from-cart/{cartItemIndex}">
+                <div class="border-2 rounded" id="DELETE-api/v1/clear-cart">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -4233,7 +4233,7 @@
                         DELETE
                     </span>
                     <span class="">
-                        <a href="#DELETE-api/v1/remove-from-cart/{cartItemIndex}">api/v1/remove-from-cart/{cartItemIndex}</a>
+                        <a href="#DELETE-api/v1/clear-cart">api/v1/clear-cart</a>
                     </span>
                 </h1>
                 </div>
@@ -4246,7 +4246,7 @@
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v1/remove-from-cart/{cartItemIndex}">{{window.location.origin}}/api/v1/remove-from-cart/{cartItemIndex}</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v1/clear-cart">{{window.location.origin}}/api/v1/clear-cart</a>
                             </td>
                         </tr>
                         <tr>
@@ -4255,7 +4255,7 @@
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@removeFromCart</td>
+                            <td class="align-left pl-2 pr-2 break-all">@clearCart</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
@@ -4517,7 +4517,7 @@
 
             return validations
         }
-        var docs = [{"uri":"api\/v1\/add-to-cart","methods":["POST"],"middlewares":["api","auth:api"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\CartController","method":"addToCart","httpMethod":"POST","rules":{"product_id":["required|exists:App\\Models\\Product,id"],"quantity":["nullable|numeric"]},"docBlock":""},{"uri":"api\/v1\/auth-user","methods":["GET","HEAD"],"middlewares":["api","auth:api"],"controller":"AuthController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\AuthController","method":"authUser","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v1\/cart-item-quantity-set\/{cartItemIndex}","methods":["POST"],"middlewares":["api","auth:api"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\CartController","method":"cartItemQuantitySet","httpMethod":"POST","rules":{"quantity":["required|integer|gt:0"]},"docBlock":""},{"uri":"api\/v1\/cart-items","methods":["GET","HEAD"],"middlewares":["api","auth:api"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\CartController","method":"cartItems","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v1\/clear-cart","methods":["DELETE"],"middlewares":["api","auth:api"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\CartController","method":"clearCart","httpMethod":"DELETE","rules":[],"docBlock":""},{"uri":"api\/v1\/decrement-cart-item\/{cartItemIndex}","methods":["POST"],"middlewares":["api","auth:api"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\CartController","method":"decrementCartItem","httpMethod":"POST","rules":[],"docBlock":""},{"uri":"api\/v1\/increment-cart-item\/{cartItemIndex}","methods":["POST"],"middlewares":["api","auth:api"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\CartController","method":"incrementCartItem","httpMethod":"POST","rules":[],"docBlock":""},{"uri":"api\/v1\/login","methods":["POST"],"middlewares":["api"],"controller":"AuthController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\AuthController","method":"login","httpMethod":"POST","rules":{"email":["required|email"],"password":["required"]},"docBlock":""},{"uri":"api\/v1\/logout","methods":["GET","HEAD"],"middlewares":["api","auth:api"],"controller":"AuthController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\AuthController","method":"logout","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v1\/orders","methods":["POST"],"middlewares":["api","auth:api"],"controller":"OrderController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\OrderController","method":"store","httpMethod":"POST","rules":{"shipping_address":["required|string"]},"docBlock":""},{"uri":"api\/v1\/orders","methods":["GET","HEAD"],"middlewares":["api","auth:api"],"controller":"OrderController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\OrderController","method":"index","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v1\/products-import","methods":["POST"],"middlewares":["api"],"controller":"ProductController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\ProductController","method":"import","httpMethod":"POST","rules":{"csv_file":["required|file|mimes:csv"]},"docBlock":""},{"uri":"api\/v1\/register","methods":["POST"],"middlewares":["api"],"controller":"AuthController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\AuthController","method":"register","httpMethod":"POST","rules":{"name":["required|string"],"email":["required|email|Illuminate\\Validation\\Rules\\Unique"],"password_confirmation":["required|min:6"],"password":["required|min:6|confirmed"]},"docBlock":""},{"uri":"api\/v1\/remove-from-cart\/{cartItemIndex}","methods":["DELETE"],"middlewares":["api","auth:api"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\CartController","method":"removeFromCart","httpMethod":"DELETE","rules":[],"docBlock":""}];
+        var docs = [{"uri":"api\/v1\/auth-user","methods":["GET","HEAD"],"middlewares":["api","auth:api"],"controller":"AuthController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\AuthController","method":"authUser","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v1\/logout","methods":["GET","HEAD"],"middlewares":["api","auth:api"],"controller":"AuthController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\AuthController","method":"logout","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v1\/cart-items","methods":["GET","HEAD"],"middlewares":["api","auth:api"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\CartController","method":"cartItems","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v1\/orders","methods":["GET","HEAD"],"middlewares":["api","auth:api"],"controller":"OrderController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\OrderController","method":"index","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v1\/register","methods":["POST"],"middlewares":["api"],"controller":"AuthController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\AuthController","method":"register","httpMethod":"POST","rules":{"name":["required|string"],"email":["required|email|Illuminate\\Validation\\Rules\\Unique"],"password_confirmation":["required|min:6"],"password":["required|min:6|confirmed"]},"docBlock":""},{"uri":"api\/v1\/login","methods":["POST"],"middlewares":["api"],"controller":"AuthController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\AuthController","method":"login","httpMethod":"POST","rules":{"email":["required|email"],"password":["required"]},"docBlock":""},{"uri":"api\/v1\/products-import","methods":["POST"],"middlewares":["api"],"controller":"ProductController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\ProductController","method":"import","httpMethod":"POST","rules":{"csv_file":["required|file|mimes:csv"]},"docBlock":""},{"uri":"api\/v1\/add-to-cart","methods":["POST"],"middlewares":["api","auth:api"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\CartController","method":"addToCart","httpMethod":"POST","rules":{"product_id":["required|exists:App\\Models\\Product,id"],"quantity":["nullable|numeric"]},"docBlock":""},{"uri":"api\/v1\/cart-item-quantity-set\/{cartItemIndex}","methods":["POST"],"middlewares":["api","auth:api"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\CartController","method":"cartItemQuantitySet","httpMethod":"POST","rules":{"quantity":["required|integer|gt:0"]},"docBlock":""},{"uri":"api\/v1\/increment-cart-item\/{cartItemIndex}","methods":["POST"],"middlewares":["api","auth:api"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\CartController","method":"incrementCartItem","httpMethod":"POST","rules":[],"docBlock":""},{"uri":"api\/v1\/decrement-cart-item\/{cartItemIndex}","methods":["POST"],"middlewares":["api","auth:api"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\CartController","method":"decrementCartItem","httpMethod":"POST","rules":[],"docBlock":""},{"uri":"api\/v1\/orders","methods":["POST"],"middlewares":["api","auth:api"],"controller":"OrderController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\OrderController","method":"store","httpMethod":"POST","rules":{"shipping_address":["required|string"]},"docBlock":""},{"uri":"api\/v1\/remove-from-cart\/{cartItemIndex}","methods":["DELETE"],"middlewares":["api","auth:api"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\CartController","method":"removeFromCart","httpMethod":"DELETE","rules":[],"docBlock":""},{"uri":"api\/v1\/clear-cart","methods":["DELETE"],"middlewares":["api","auth:api"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\V1\\CartController","method":"clearCart","httpMethod":"DELETE","rules":[],"docBlock":""}];
         var app_url = "http:\/\/ecommerce-task.test";
 
         //remove trailing slash if any
