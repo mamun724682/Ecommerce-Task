@@ -1,4 +1,12 @@
-# Please follow the instructions
+## E-commerce API
+
+## Packages Used
+- Laravel Passport
+- Laravel Excel
+- Laravel Cart Manager
+- Laravel Request Docs
+
+## Installation Instruction
 
 `Server Requirements:` Php server & CLI version >= 8.1 <br>
 
