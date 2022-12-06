@@ -1,0 +1,420 @@
+{
+	"info": {
+		"_postman_id": "98f1e66b-37b0-4cbb-bf98-007150a84fdd",
+		"name": "Ecommerce Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Abdullah",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "admin@app.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "default"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "12345678",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/register",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@app.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/auth-user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"auth-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/logout",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Import",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csv_file",
+							"type": "file",
+							"src": "/C:/Users/alexm/Downloads/Product Import.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/products-import",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"products-import"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/products",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cart Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/cart-items",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cart-items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add To Cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_id",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "quantity",
+							"value": "10",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/add-to-cart",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"add-to-cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cart Item Quantity Set",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "quantity",
+							"value": "10",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/cart-item-quantity-set/0",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cart-item-quantity-set",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cart Item Increment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/increment-cart-item/0",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"increment-cart-item",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cart Item Decrement",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/decrement-cart-item/0",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"decrement-cart-item",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove From Cart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/remove-from-cart/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"remove-from-cart",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clear Cart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/clear-cart",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"clear-cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/orders",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "shipping_address",
+							"value": "Dhaka, Bangladesh",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/orders",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjViMGI5MjBjNDI2Nzg4OGY2ZDgyNzEyMzdmYTI5MmM1YWJiYmM0MTc0NTEzYjkyN2VmMGVmM2IyNzE5ZmI3NWRhMGUxNTg1YWQwMGE1NzMiLCJpYXQiOjE2NzAxNjQyNDUuMTE0MzM3LCJuYmYiOjE2NzAxNjQyNDUuMTE0MzM4LCJleHAiOjE3MDE3MDAyNDUuMTEzNDE3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.T1DP5Keq-anJ5NXy7lG8xyyKsjd_1L8toQMJNIebIqTZqIp5brJ_1xSTF8NEmfJ0xTfx7nCICHTA-ubf7WZq-4YVQfXGbRh80EnOaqHZyjWyOsRVQMRm_OwOoCmUI_hrXjRUOinkPnJ4awvTCZaVeRZWuu5dwwW2VGmC-yf_Lx-nDSayZY2T3JTfxsRlH9hWJaE68O6LHgthVeaEJNQosoEHJjyiXg1efPX1-IayWuoYCHPivJfJcTHHMzOAneiezcZQLWuuGAzmvkbWOwB9ntKzO22WQ0JaEw4xIYLy5qo6J_r9_OO0Sp4cSdecnMzesYvM3CxXMXmCGdLKGEdOYnYkpC5x3DEcubrvU0bpfKnsb8HwbPsEpKw1RXdSovdCeWH4n-tv4QTyQdNyHkPv8Jxhjk3n_CaEoAfoPKG-4FDMuVHnJcyTt7m4YhJItHBDlzI-h5SdILqO5_EOXJUSfYCi7tsKTKbhl5qYDU8FgHQYOPews-SwGvi-UkyhXf-Uw0Syw53BhFAGgXkF0TMV3XYoEot3DgDKWqf4ZEwFMdwBHefjXUXsS4CJ6Ei5KVsAH8YKZRWswVijlM98BVkAN0AASNMnvL4tBnQDE1ZoDmnuyeurVKytn-YwJQQcQ2BagCo7BPDV9K2uWLQtyAGNtyM5PLYiPAmeIYda6Nyx4Uk",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://ecommerce-task.test/api/v1",
+			"type": "default"
+		}
+	]
+}
